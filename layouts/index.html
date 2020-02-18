@@ -3,7 +3,7 @@
         <div class="post-warp">
             {{- partial "home/profile.html" . -}}
 
-            {{ $paginator := where .Site.RegularPages "Type" "posts" -}}
+            {{ $paginator := where .Site.RegularPages "Type" "post" -}}
             {{ $paginator = where $paginator "Params.show_in_homepage" "!=" false -}}
             {{ with .Site.Params.home_paginate -}}
                 {{ $paginator = $.Paginate $paginator . -}}
